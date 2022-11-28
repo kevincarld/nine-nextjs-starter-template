@@ -1,6 +1,10 @@
 export const ButtonStyles = {
   // style object for base or default style
-  baseStyle: {},
+  baseStyle: {
+    _focus: {
+      ring: '0px'
+    },
+  },
 
   // styles for different sizes ("sm", "md", "lg")
   sizes: {},
