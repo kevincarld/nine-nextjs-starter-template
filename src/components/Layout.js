@@ -6,7 +6,7 @@ import customTheme from 'theme';
 
 export default function Layout({children}) {
   return (
-    <ChakraProvider theme={customTheme}>
+    <ChakraProvider resetCSS theme={customTheme}>
       <Box as='main'>
         {children}
       </Box>
