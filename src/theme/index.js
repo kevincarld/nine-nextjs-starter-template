@@ -2,8 +2,12 @@ import { extendTheme } from '@chakra-ui/react'
 import { colors } from "./colors"
 import { space } from './space'
 import { sizes } from './sizes'
+import { ButtonStyles as Button } from './components/ButtonStyles'
 
 const customTheme = extendTheme({
+  components: {
+    Button
+  },
   textStyles: {
     h1: {
       // you can also use responsive styles
