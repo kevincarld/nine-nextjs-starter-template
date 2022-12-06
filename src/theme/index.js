@@ -24,11 +24,11 @@ const customTheme = extendTheme({
     },
   },
   breakpoints : {
-    xs: '0',
-    sm: '576px',
-    md: '768px',
-    lg: '992px',
-    xl: '1320px',
+    mobile: '576px',
+    tablet: '768px',
+    tabletW: '1024px',
+    desktop: '1280px',
+    wide: '1600px',
   },
   fonts: {
     body: "system-ui, sans-serif",
