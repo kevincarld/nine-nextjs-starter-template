@@ -13,11 +13,13 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Exporting to static site
+## Important commands
 ```bash
 # export
 yarn export
 # export with image optimization
 yarn exportopt
+# create optimised images
+yarn optimise
 ```
 Static will be exported to /out

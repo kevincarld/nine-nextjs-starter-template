@@ -11,7 +11,8 @@
     "gg": "next build && next start",
     "lint": "next lint",
     "export": "next build && next export",
-    "exportopt": "next build && next export && next-image-export-optimizer"
+    "exportopt": "next build && next export && better-image-optimizer-next",
+    "optimise": "better-image-optimizer-next"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.4.1",
@@ -19,11 +20,11 @@
     "@emotion/react": "^11.7.1",
     "@emotion/server": "^11.4.0",
     "@emotion/styled": "^11.6.0",
+    "better-image-optimizer-next": "^2.0.0",
     "eslint": "8.28.0",
     "eslint-config-next": "13.0.5",
     "framer-motion": "^7.6.12",
     "next": "13.0.5",
-    "next-image-export-optimizer": "^1.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   }
