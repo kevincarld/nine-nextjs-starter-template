@@ -6,6 +6,7 @@ const nextConfig = {
     // imageSizes: [],
     deviceSizes: [280,360,375,428,768,1024,1280,1366,1440,1920],
   },
+  assetPrefix: './',
   exportPathMap: async function (
     defaultPathMap,
     { dev, dir, outDir, distDir, buildId }
