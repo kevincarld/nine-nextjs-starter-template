@@ -16,6 +16,5 @@ export const ButtonStyles = {
   defaultProps: {
     variant: 'solid',
     size: "md",
-    colorScheme: "brand"
   },
 }
