@@ -1,10 +1,14 @@
 import React from 'react';
 
 export default function MastheadProvider({children}) {
-  const [mountHead, setMountHead] = React.useState(false)
+
   React.useEffect(() => {
-    const fairfaxInit = async() => {
+    let isMounted = false;
+
+    const fairfaxInit = async () => {
       const fairfax = (await import('fairfax-header')).default
+
+      if (!isMounted) {
         fairfax({
           headerConfig: {
             logoColor: "black",
@@ -20,11 +24,13 @@ export default function MastheadProvider({children}) {
             bgColor: "white",
           }
         });
+      }
     }
-    if(!mountHead){
-      fairfaxInit()
-      setMountHead(true)
-    }
+
+    fairfaxInit()
+
+    return () => isMounted = true;
+
   }, []);
 
   return (
