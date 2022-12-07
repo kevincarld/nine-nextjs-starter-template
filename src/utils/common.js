@@ -17,3 +17,25 @@ export function useResponsive(query, key) {
   }
 
 }
+
+export function useIsInViewport(ref) {
+  const [isIntersecting, setIsIntersecting] = useState(false);
+
+  const observer = React.useMemo(
+    () =>
+      new IntersectionObserver(([entry]) =>
+        setIsIntersecting(entry.isIntersecting),
+      ),
+    [],
+  );
+
+  React.useEffect(() => {
+    observer.observe(ref.current);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [ref, observer]);
+
+  return isIntersecting;
+}
