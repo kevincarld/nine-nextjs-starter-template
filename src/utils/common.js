@@ -39,3 +39,10 @@ export function useIsInViewport(ref) {
 
   return isIntersecting;
 }
+
+// usage: mock('1920x600', 'Text here')
+export const mock = (dimensions, text='Img') => {
+  let newText = text.replaceAll(' ', '+')
+
+  return `https://via.placeholder.com/${dimensions}?text=${newText}`
+}
