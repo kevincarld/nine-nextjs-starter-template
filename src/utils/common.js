@@ -41,8 +41,17 @@ export function useIsInViewport(ref) {
 }
 
 // usage: mock('1920x600', 'Text here')
-export const mock = (dimensions, text='Img') => {
+export const mock = (dimensions, text='Img', color="gray") => {
+  const colors = {
+    gray: '808080',
+    white: 'FFFFFF',
+    black: '000000',
+    red: 'FCA481',
+    blue: 'A4DEF0',
+    green: 'A3CFA7',
+    yellow: 'FFE194',
+    pink: 'F7DCEC'
+  }
   let newText = text.replaceAll(' ', '+')
-
-  return `https://via.placeholder.com/${dimensions}?text=${newText}`
+  return `https://via.placeholder.com/${dimensions}/${colors[color]}?text=${newText}`
 }
