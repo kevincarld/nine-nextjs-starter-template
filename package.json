@@ -11,8 +11,11 @@
     "gg": "next build && next start",
     "lint": "next lint",
     "export": "next build && next export",
-    "exportopt": "next build && next export && better-image-optimizer-next",
-    "optimise": "better-image-optimizer-next"
+    "exportopt": "next build && next export && node optimize.js",
+    "optimise": "node optimize.js",
+    "optimize": "node optimize.js",
+    "clean": "rm -rf out",
+    "cleanall": "rm -rf out && rm -rf .next"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.4.1",
@@ -21,12 +24,16 @@
     "@emotion/server": "^11.4.0",
     "@emotion/styled": "^11.6.0",
     "better-image-optimizer-next": "^2.0.0",
+    "cli-progress": "^3.11.2",
     "eslint": "8.28.0",
     "eslint-config-next": "13.0.5",
     "fairfax-header": "^0.2.2",
     "framer-motion": "^7.6.12",
     "next": "13.0.5",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-lazy-load-image-component": "^1.5.6",
+    "sharp": "^0.31.2",
+    "swiper": "^8.4.2"
   }
 }
