@@ -1,6 +1,6 @@
 import { Global } from '@emotion/react'
 
-const Fonts = () => (
+const GlobalCss = () => (
   <Global
     styles={`
       /* latin */
@@ -25,4 +25,4 @@ const Fonts = () => (
   />
 )
 
-export default Fonts
+export default GlobalCss
