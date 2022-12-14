@@ -2,11 +2,11 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    loader: "custom",
-    // imageSizes: [],
-    deviceSizes: [280,360,375,428,768,1024,1280,1366,1440,1920],
+    imageSizes: [360,768,1024],
+    deviceSizes: [360,768,1024],
+    unoptimized: true,
   },
-  assetPrefix: './',
+  // assetPrefix: '.', //uncomment when exporting bcoz this stops browser hot reload (this is needed when exporting to correct paths)
   exportPathMap: async function (
     defaultPathMap,
     { dev, dir, outDir, distDir, buildId }
@@ -16,19 +16,13 @@ const nextConfig = {
     }
   },
   env: {
-    //https://www.npmjs.com/package/next-image-export-optimizer
-    nextImageExportOptimizer_imageFolderPath: "public/images",
-    nextImageExportOptimizer_exportFolderPath: "out",
-    nextImageExportOptimizer_quality: 75,
-    nextImageExportOptimizer_storePicturesInWEBP: true,
-    // If you do not want to use blurry placeholder images, then you can set
-    // nextImageExportOptimizer_generateAndUseBlurImages to false and pass
-    // `placeholder="empty"` to all <ExportedImage> components.
-    //
-    // If nextImageExportOptimizer_generateAndUseBlurImages is false and you
-    // forget to set `placeholder="empty"`, you'll see 404 errors for the missing
-    // placeholder images in the console.
-    nextImageExportOptimizer_generateAndUseBlurImages: true,
+    nineScripts: true,
+    // TODO: add npm link here for optimizer
+    optimizer_imageFolderPath: "public/images",
+    optimizer_destinationBase: "public/optimized",
+    optimizer_exportFolderPath: "out",
+    optimizer_quality: 75,
+    optimizer_storePicturesInWEBP: true,
   },
 }
 
