@@ -2,7 +2,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+- Check and update config file /next.config.js
+
+Running dev server:
 
 ```bash
 # install dependencies
@@ -17,9 +19,5 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ```bash
 # export
 yarn export
-# export with image optimization
-yarn exportopt
-# create optimised images
-yarn optimise
 ```
-Static will be exported to /out
+Static will be exported to /out or check package json for export script (next export -o samplefoldername)

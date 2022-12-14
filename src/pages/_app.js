@@ -6,6 +6,8 @@ import Script from 'next/script';
 // import "swiper/css/pagination";
 // import "swiper/css/navigation";
 
+import AppMeta from 'components/AppMeta';
+
 export default function App({ Component, pageProps }) {
   const isDev = process.env.NODE_ENV === 'development'
   const hasNineScripts = process.env.nineScripts
@@ -13,57 +15,10 @@ export default function App({ Component, pageProps }) {
   return (
     <React.Fragment>
       <Head>
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
-        <title>Nine starter template</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-        <meta property="og:type" content="website" />
-        <meta property="fb:app_id" content="2221664741450677" />
-        <meta property="og:site_name" content="masthead" />
-
-        <meta property="og:title" content="Brand - Title - masthead" />
-        <meta name="twitter:title" content="Brand - Title - masthead" />
-
-        <meta property="og:description" content="desc" />
-        <meta name="twitter:description" content="desc" />
-        <meta name="description" content="desc" />
-
-        <link rel="canonical" href="https://brandedcontent.smh.com.au/xxx/xxx" />
-        <meta property="og:url" content="https://brandedcontent.smh.com.au/xxx/xxx" />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta property="og:image:type" content="image/jpeg" />
-        <meta property="og:image:width" content="1920" />
-        <meta property="og:image:height" content="1080" />
-        <meta property="og:image" content="https://live-native-paid-content.pantheonsite.io/wp-content/uploads/xxx" />
-        <meta property="og:image:secure_url" content="https://live-native-paid-content.pantheonsite.io/wp-content/uploads/xxx" />
-        <meta name="twitter:image" content="https://live-native-paid-content.pantheonsite.io/wp-content/uploads/xxx" />
-
-        <meta name="theme-color" content="#0a1633" />
-        <link rel="shortcut icon" href="https://brandedcontent.smh.com.au/wp-content/uploads/2018/06/favicon.ico" />
-        <link rel="icon" href="https://brandedcontent.smh.com.au/wp-content/uploads/2018/06/favicon.ico" />
-        <link rel="apple-touch-icon"
-          href="https://brandedcontent.smh.com.au/wp-content/uploads/2018/06/apple-touch-icon-4.png" />
-        <link rel="apple-touch-icon" sizes="57x57"
-          href="https://brandedcontent.smh.com.au/wp-content/uploads/2018/06/apple-touch-icon-57x57-4.png" />
-        <link rel="apple-touch-icon" sizes="72x72"
-          href="https://brandedcontent.smh.com.au/wp-content/uploads/2018/06/apple-touch-icon-72x72-4.png" />
-        <link rel="apple-touch-icon" sizes="76x76"
-          href="https://brandedcontent.smh.com.au/wp-content/uploads/2018/06/apple-touch-icon-76x76-4.png" />
-        <link rel="apple-touch-icon" sizes="114x114"
-          href="https://brandedcontent.smh.com.au/wp-content/uploads/2018/06/apple-touch-icon-114x114-4.png" />
-        <link rel="apple-touch-icon" sizes="120x120"
-          href="https://brandedcontent.smh.com.au/wp-content/uploads/2018/06/apple-touch-icon-120x120-4.png" />
-        <link rel="apple-touch-icon" sizes="144x144"
-          href="https://brandedcontent.smh.com.au/wp-content/uploads/2018/06/apple-touch-icon-144x144-4.png" />
-        <link rel="apple-touch-icon" sizes="152x152"
-          href="https://brandedcontent.smh.com.au/wp-content/uploads/2018/06/apple-touch-icon-152x152-4.png" />
-        <link rel="apple-touch-icon" sizes="180x180"
-          href="https://brandedcontent.smh.com.au/wp-content/uploads/2018/06/apple-touch-icon-180x180-4.png" />
+        {/* see next.config.js for setting up */}
+        <AppMeta />
       </Head>
 
       {!isDev && hasNineScripts &&
