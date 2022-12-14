@@ -1,14 +1,16 @@
 import React from 'react'
-import { Box } from '@chakra-ui/react'
+import { Text } from '@chakra-ui/react'
 
-export default function PreLine({content}) {
+export default function PreLine({content, ...rest}) {
   return (
     <>
-      <Box sx={{
-        whiteSpace: 'pre-line'
-      }}>
+      <Text
+        {...rest}
+        sx={{
+          whiteSpace: 'pre-line'
+        }}>
         {`${content}`}
-      </Box>
+      </Text>
     </>
   )
 }
