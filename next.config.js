@@ -6,7 +6,7 @@ const nextConfig = {
     deviceSizes: [360,768,1024],
     unoptimized: true,
   },
-  // assetPrefix: '.', //uncomment when exporting bcoz this stops browser hot reload (this is needed when exporting to correct paths)
+  assetPrefix: process.env.NODE_ENV === 'development' ? undefined : '.' ,
   exportPathMap: async function (
     defaultPathMap,
     { dev, dir, outDir, distDir, buildId }
