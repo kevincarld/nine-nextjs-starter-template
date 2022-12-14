@@ -24,7 +24,7 @@ const customTheme = extendTheme({
     },
   },
   breakpoints : {
-    mobile: '576px',
+    mobile: '360px',
     tablet: '768px',
     tabletW: '1024px',
     desktop: '1280px',
