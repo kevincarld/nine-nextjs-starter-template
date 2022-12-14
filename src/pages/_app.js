@@ -8,6 +8,7 @@ import Script from 'next/script';
 
 export default function App({ Component, pageProps }) {
   const isDev = process.env.NODE_ENV === 'development'
+  const hasNineScripts = process.env.nineScripts
 
   return (
     <React.Fragment>
@@ -65,7 +66,7 @@ export default function App({ Component, pageProps }) {
           href="https://brandedcontent.smh.com.au/wp-content/uploads/2018/06/apple-touch-icon-180x180-4.png" />
       </Head>
 
-      {!isDev &&
+      {!isDev && hasNineScripts &&
       <>
         <Script id="titan">
           {`
@@ -177,7 +178,7 @@ export default function App({ Component, pageProps }) {
 
       <Component {...pageProps} />
 
-      {!isDev &&
+      {!isDev && hasNineScripts &&
       <>
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WV7FLW7" height="0" width="0" style={{display: 'none', visibility: 'hidden'}}></iframe></noscript>
         <Script async src="https://www.googletagmanager.com/gtag/js?id=UA-101266782-31" />
