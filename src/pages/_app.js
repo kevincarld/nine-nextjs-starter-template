@@ -20,6 +20,10 @@ export default function App({ Component, pageProps }) {
 
         {/* see next.config.js for setting up */}
         <AppMeta />
+        {/* moved og image from AppMeta to here bcoz it doesnt work if not - for some reason */}
+        <meta property="og:image" content={process.env.appMeta?.ogImage} />
+        <meta property="og:image:secure_url" content={process.env.appMeta?.ogImage} />
+        <meta name="twitter:image" content={process.env.appMeta?.ogImage} />
       </Head>
 
       {!isDev && hasNineScripts &&

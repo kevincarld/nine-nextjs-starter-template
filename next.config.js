@@ -26,12 +26,6 @@ const nextConfig = {
       ogImage: 'https://live-native-paid-content.pantheonsite.io/wp-content/uploads/2022/12/lecreuset-social-media-bg-1.jpg',
     },
     nineScripts: true,
-    // TODO: add npm link here for optimizer
-    optimizer_imageFolderPath: "public/images",
-    optimizer_destinationBase: "public/optimized",
-    optimizer_exportFolderPath: "out",
-    optimizer_quality: 75,
-    optimizer_storePicturesInWEBP: true,
   },
 }
 

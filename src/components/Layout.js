@@ -10,9 +10,11 @@ import MastheadProvider from './MastheadProvider';
 export default function Layout({children}) {
   return (
     <ChakraProvider resetCSS theme={customTheme}>
-      {/* <GlobalCss /> */}
+      <GlobalCss />
       <Box as='main'>
-        {children}
+        <MastheadProvider>
+          {children}
+        </MastheadProvider>
       </Box>
     </ChakraProvider>
 
