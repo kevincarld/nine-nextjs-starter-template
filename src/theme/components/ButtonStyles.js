@@ -1,6 +1,7 @@
 export const ButtonStyles = {
   // style object for base or default style
   baseStyle: {
+    outline: 'none!important',
     _focus: {
       ring: '0px'
     },
