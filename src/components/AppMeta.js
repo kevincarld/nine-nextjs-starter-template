@@ -18,8 +18,8 @@ export default function AppMeta() {
       <meta property="fb:app_id" content="2221664741450677" />
       <meta property="og:site_name" content={siteName} />
 
-      <meta property="og:title" content={title} />
-      <meta name="twitter:title" content={title} />
+      <meta property="og:title" content={`${title} - ${siteName}`} />
+      <meta name="twitter:title" content={`${title} - ${siteName}`} />
 
       <meta property="og:description" content={description} />
       <meta name="twitter:description" content={description} />
