@@ -71,6 +71,44 @@ export default function AppIcons({type="smh", theme="#0a1633"}) {
           )
           break;
 
+        case "nine":
+          return (
+            <>
+              <meta name="theme-color" content={theme} />
+              <link rel="shortcut icon"
+              href="https://brandedcontent.nine.com.au/wp-content/uploads/2021/01/favicon.ico" />
+              <link rel="icon"
+              href="https://brandedcontent.nine.com.au/wp-content/uploads/2021/01/favicon.ico" />
+              <link rel="apple-touch-icon"
+              href="https://brandedcontent.nine.com.au/wp-content/uploads/2022/09/apple-touch-icon.png" />
+              <link rel="apple-touch-icon"
+              sizes="57x57"
+              href="https://brandedcontent.nine.com.au/wp-content/uploads/2022/09/apple-touch-icon-57x57-1.png" />
+              <link rel="apple-touch-icon"
+              sizes="72x72"
+              href="https://brandedcontent.nine.com.au/wp-content/uploads/2022/09/apple-touch-icon-72x72-1.png" />
+              <link rel="apple-touch-icon"
+              sizes="76x76"
+              href="https://brandedcontent.nine.com.au/wp-content/uploads/2022/09/apple-touch-icon-76x76-1.png" />
+              <link rel="apple-touch-icon"
+              sizes="114x114"
+              href="https://brandedcontent.nine.com.au/wp-content/uploads/2022/09/apple-touch-icon-114x114-1.png" />
+              <link rel="apple-touch-icon"
+              sizes="120x120"
+              href="https://brandedcontent.nine.com.au/wp-content/uploads/2022/09/apple-touch-icon-120x120-1.png" />
+              <link rel="apple-touch-icon"
+              sizes="144x144"
+              href="https://brandedcontent.nine.com.au/wp-content/uploads/2022/09/apple-touch-icon-144x144-1.png" />
+              <link rel="apple-touch-icon"
+              sizes="152x152"
+              href="https://brandedcontent.nine.com.au/wp-content/uploads/2022/09/apple-touch-icon-152x152-1.png" />
+              <link rel="apple-touch-icon"
+              sizes="180x180"
+              href="https://brandedcontent.nine.com.au/wp-content/uploads/2022/09/apple-touch-icon-180x180-1.png" />
+            </>
+          )
+          break;
+
 
         default:
           return null;
