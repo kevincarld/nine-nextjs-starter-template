@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Box } from '@chakra-ui/react';
 export default function MastheadProvider({children}) {
   // set default config
   const config = {
@@ -39,10 +39,12 @@ export default function MastheadProvider({children}) {
   }, [config]);
 
   return (
-    <div>
+    <Box as='main'>
       <header></header>
-      {children}
+
+        {children}
+
       <footer></footer>
-    </div>
+    </Box>
   )
 }
