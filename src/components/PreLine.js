@@ -1,7 +1,7 @@
 import React from 'react'
 import { Text } from '@chakra-ui/react'
 
-export default function PreLine({content, ...rest}) {
+export default function PreLine({children, content, ...rest}) {
   return (
     <>
       <Text
@@ -9,7 +9,7 @@ export default function PreLine({content, ...rest}) {
         sx={{
           whiteSpace: 'pre-line'
         }}>
-        {`${content}`}
+          {children ? children : `${content}`}
       </Text>
     </>
   )
