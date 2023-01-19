@@ -18,7 +18,7 @@ const nextConfig = {
   env: {
     appMeta: {
       canonical: 'canonical in next.config.js', // https://brandedcontent.[masthead].com.au/xxx/xxx"
-      title: 'title in next.config.js', // Brand - Title - masthead
+      title: 'title in next.config.js', // Brand - Title
       description: 'description in next.config.js',
       siteName: 'siteName Title in next.config.js', // The Sydney Morning Herald, GOODFOOD
       icon: 'smh', // smh, goodfood, nine
