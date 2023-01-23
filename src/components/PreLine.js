@@ -6,9 +6,8 @@ export default function PreLine({children, content, ...rest}) {
     <>
       <Text
         {...rest}
-        sx={{
-          whiteSpace: 'pre-line'
-        }}>
+        whiteSpace='pre-line'
+      >
           {children ? children : `${content}`}
       </Text>
     </>
