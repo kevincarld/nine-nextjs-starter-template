@@ -1,6 +1,9 @@
 import React from 'react';
 import { Box } from '@chakra-ui/react';
 export default function MastheadProvider({children}) {
+  const hasNineScripts = process.env.nineScripts
+  if(!hasNineScripts) return children
+
   // set default config
   const config = {
     headerConfig: {
