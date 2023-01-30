@@ -6,6 +6,7 @@ import customTheme from 'theme';
 import GlobalCss from 'theme/components/GlobalCss';
 import MastheadProvider from './MastheadProvider';
 import { ParallaxProvider } from 'react-scroll-parallax'
+import { ScrollerMotion } from 'scroller-motion'
 
 export default function Layout({children}) {
   return (
@@ -13,7 +14,9 @@ export default function Layout({children}) {
       <GlobalCss />
         <ParallaxProvider>
           <MastheadProvider>
-            {children}
+            <ScrollerMotion>
+              {children}
+            </ScrollerMotion>
           </MastheadProvider>
         </ParallaxProvider>
     </ChakraProvider>
