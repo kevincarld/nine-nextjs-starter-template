@@ -25,7 +25,7 @@ const nextConfig = {
       icon: 'smh', // smh, goodfood, nine
       themeColour: '#0a1633', // hex
       ogImage: 'https://live-native-paid-content.pantheonsite.io/wp-content/uploads/2022/12/lecreuset-social-media-bg-1.jpg',
-      date: 'mm-dd-yy', // e.g 03-12-23
+      date: 'dd-mm-yy', // e.g 03-12-23
       year: 'yyyy', // e.g 2023
     },
     nineScripts: false,
