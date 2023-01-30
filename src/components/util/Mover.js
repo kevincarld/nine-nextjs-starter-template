@@ -2,6 +2,7 @@ import React from 'react'
 import { Parallax } from 'react-scroll-parallax'
 import { useResponsive } from 'utils/common'
 
+// NOTE: USE ONLY IF ScrollerMotion is being used in layout.
 export default function Mover({ y=[50, -50] ,children, ...rest }) {
   const isDesktop = useResponsive('up', 'desktop')
   return (

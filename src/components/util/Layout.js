@@ -14,9 +14,9 @@ export default function Layout({children}) {
       <GlobalCss />
         <ParallaxProvider>
           <MastheadProvider>
-            <ScrollerMotion>
+            {/* <ScrollerMotion> */}
               {children}
-            </ScrollerMotion>
+            {/* </ScrollerMotion> */}
           </MastheadProvider>
         </ParallaxProvider>
     </ChakraProvider>
