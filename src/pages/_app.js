@@ -12,10 +12,16 @@ export default function App({ Component, pageProps }) {
   const isDev = process.env.NODE_ENV === 'development'
   const hasNineScripts = process.env.nineScripts
 
+  const brand = process.env.appMeta?.brand
+  const title = process.env.appMeta?.title
+  const siteName = process.env.appMeta?.siteName
+  const date = process.env.appMeta?.date
+  const year = process.env.appMeta?.year
+
   return (
     <React.Fragment>
       <Head>
-        <title>{process.env.appMeta?.title}</title>
+        <title>{`${process.env.appMeta?.brand} - ${process.env.appMeta?.title}`}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
         {/* see next.config.js for setting up */}
@@ -48,20 +54,20 @@ export default function App({ Component, pageProps }) {
             dataLayer.push({
               page: {
                 author: "",
-                publishDate: "03-12-22AEST00:00:0000000",
-                updateDate: "03-12-22AEST00:00:0000000",
+                publishDate: "${date}AEST00:00:0000000",
+                updateDate: "${date}AEST00:00:0000000",
                 renderedPlatform: "WEB",
                 authoredPlatform: "Pantheon",
                 viewID: "",
                 type: "Article",
-                assetId: "Clipsal",
-                contentSource: "SMH",
+                assetId: "${brand}",
+                contentSource: "${siteName}",
                 primaryTag: "",
                 tags: "",
                 components: "",
                 promotedType: "sponsored",
                 sponsored: "true",
-                name: "Clipsal",
+                name: "${brand}",
                 template: "paidcontent",
                 didMount: "false",
                 customReferrer: document.referrer,
@@ -91,7 +97,7 @@ export default function App({ Component, pageProps }) {
                 meterPeriodEnd: ""
               },
               brand: {
-                name: "smh",
+                name: "${siteName}",
                 Engagement: ""
               }
             });
@@ -106,7 +112,7 @@ export default function App({ Component, pageProps }) {
                   }
               },
               "commercial": {
-                  "sponsor": "Clipsal",
+                  "sponsor": "${brand}",
                   "type": "sponsored by",
                   "tags": ""
               },
@@ -115,9 +121,9 @@ export default function App({ Component, pageProps }) {
                   "adSite": "masthead",
                   "adZone": "SinglePageArchitechture",
                   "adKeyValues": {
-                      "cat": "Clipsal",
-                      "cat1": "2022",
-                      "cat2": "TITLE",
+                      "cat": "${brand}",
+                      "cat1": "${year}",
+                      "cat2": "${title}",
                       "ctype": "immersive",
                       "pageviewid": pageViewId
                   },
