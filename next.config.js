@@ -28,7 +28,7 @@ const nextConfig = {
       date: 'mm-dd-yy', // e.g 03-12-23
       year: 'yyyy', // e.g 2023
     },
-    nineScripts: true,
+    nineScripts: false,
   },
 }
 
