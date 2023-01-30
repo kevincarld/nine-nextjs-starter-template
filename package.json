@@ -15,7 +15,8 @@
     "optimise": "node optimize.js",
     "optimize": "node optimize.js",
     "clean": "rm -rf out",
-    "cleanall": "rm -rf out && rm -rf .next"
+    "cleanall": "rm -rf out && rm -rf .next",
+    "surge": "git pull && yarn export && surge"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.4.1",
