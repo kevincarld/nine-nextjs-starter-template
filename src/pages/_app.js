@@ -6,7 +6,7 @@ import Script from 'next/script';
 // import "swiper/css/pagination";
 // import "swiper/css/navigation";
 
-import AppMeta from 'components/AppMeta';
+import AppMeta from 'components/util/AppMeta';
 
 export default function App({ Component, pageProps }) {
   const isDev = process.env.NODE_ENV === 'development'
