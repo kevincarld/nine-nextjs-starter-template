@@ -1,7 +1,7 @@
 
 import Layout from "components/util/Layout"
 // chakra
-import { Box, Center, Heading, Button } from "@chakra-ui/react"
+import { Center, Heading, Button } from "@chakra-ui/react"
 //
 import Mover from "components/util/Mover"
 import Slider from "components/util/Slider/Slider"

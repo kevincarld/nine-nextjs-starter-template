@@ -3,14 +3,18 @@ import React from 'react'
 import { Box } from '@chakra-ui/react'
 //
 import { useResponsive } from 'utils/common';
+import { Image } from '@chakra-ui/react';
 // swiper
-import { Swiper } from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from "swiper";
+//
+import { mock } from 'utils/common';
 
-export default function Slider({prevRef, nextRef, children, ...rest}) {
+export default function Slider({children, prevRef, nextRef, ...rest}) {
   const isDesktop = useResponsive('up', 'desktop')
   const isTablet = useResponsive('up', 'tablet')
 
+  console.log(children)
   return (
       <Box
         {...rest}
@@ -19,6 +23,8 @@ export default function Slider({prevRef, nextRef, children, ...rest}) {
         centeredSlides={true}
         slidesPerView={isTablet && !isDesktop ? 2 : isDesktop ? 3 : 1}
         loop={true}
+        spaceBetween={20}
+
         speed={1000}
         autoplay={{
           delay: 2500
@@ -40,7 +46,11 @@ export default function Slider({prevRef, nextRef, children, ...rest}) {
           }
          })}
       >
-        {children}
+        {[1,2,3,4,5].map(x => (
+          <SwiperSlide className='swiper-slide' key={x}>
+            <Image fit='cover' w='full' src={mock('300x500', x.toString(), 'red')} />
+          </SwiperSlide>
+        ))}
       </Box>
   )
 }
