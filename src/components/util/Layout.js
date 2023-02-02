@@ -7,17 +7,27 @@ import GlobalCss from 'theme/components/GlobalCss';
 import MastheadProvider from './MastheadProvider';
 import { ParallaxProvider } from 'react-scroll-parallax'
 import { ScrollerMotion } from 'scroller-motion'
+import { useMediaQuery } from '@chakra-ui/react';
 
 export default function Layout({children}) {
+  const [isDesktop] = useMediaQuery(`(min-width: 1280px)`)
+
   return (
     <ChakraProvider resetCSS theme={customTheme}>
       <GlobalCss />
         <ParallaxProvider>
-          <MastheadProvider>
+          {isDesktop
+            ?
             <ScrollerMotion>
-              {children}
+              <MastheadProvider>
+                {children}
+              </MastheadProvider>
             </ScrollerMotion>
-          </MastheadProvider>
+            :
+            <MastheadProvider>
+                {children}
+            </MastheadProvider>
+          }
         </ParallaxProvider>
     </ChakraProvider>
 
