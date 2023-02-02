@@ -4,7 +4,8 @@ import Layout from "components/util/Layout"
 import { Box, Center, Heading, Button } from "@chakra-ui/react"
 //
 import Mover from "components/util/Mover"
-import { Parallax } from "react-scroll-parallax"
+import Slider from "components/util/Slider/Slider"
+
 export default function Home() {
   return (
     <Layout>
@@ -35,6 +36,7 @@ export default function Home() {
         </Mover>
       </Center>
 
+      <Slider />
     </Layout>
   )
 }

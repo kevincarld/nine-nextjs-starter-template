@@ -2,9 +2,9 @@ import React from 'react';
 import Head from 'next/head';
 import Script from 'next/script';
 
-// import 'swiper/css';
-// import "swiper/css/pagination";
-// import "swiper/css/navigation";
+import 'swiper/css';
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 import AppMeta from 'components/util/AppMeta';
 
