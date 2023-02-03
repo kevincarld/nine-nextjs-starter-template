@@ -6,8 +6,6 @@ import Container from 'components/Container';
 import { useInView } from "framer-motion"
 
 export default function BrightCoveVideo({script, dataPlayer, dataVideoId, ...rest}) {
-  if(!script || !dataPlayer || !dataVideoId) return null
-
   const ref = React.useRef(null)
   const isInView = useInView(ref, { margin: '0px 0px -150px 0px'})
 
@@ -51,6 +49,7 @@ export default function BrightCoveVideo({script, dataPlayer, dataVideoId, ...res
     }
   }, [isInView])
 
+  if(!script || !dataPlayer || !dataVideoId) return null
 
   return (
     <Box

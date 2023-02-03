@@ -2,7 +2,6 @@ import React from 'react';
 import { Box } from '@chakra-ui/react';
 export default function MastheadProvider({children}) {
   const hasNineScripts = process.env.nineScripts
-  if(!hasNineScripts) return children
 
   // set default config
   const config = {
@@ -40,6 +39,8 @@ export default function MastheadProvider({children}) {
     return () => isMounted = true;
 
   }, [config]);
+
+  if(!hasNineScripts) return children
 
   return (
     <Box as='main'>

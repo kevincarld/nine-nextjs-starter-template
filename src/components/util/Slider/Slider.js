@@ -14,7 +14,6 @@ export default function Slider({children, prevRef, nextRef, ...rest}) {
   const isDesktop = useResponsive('up', 'desktop')
   const isTablet = useResponsive('up', 'tablet')
 
-  console.log(children)
   return (
       <Box
         {...rest}

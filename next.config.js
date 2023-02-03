@@ -29,6 +29,11 @@ const nextConfig = {
       year: 'yyyy', // e.g 2023
     },
     nineScripts: false,
+
+    // false
+    // locomotive : use data attr for section movements
+    // motion : use in conjuction with components/util/Mover
+    scrollEffect: 'locomotive',
   },
 }
 

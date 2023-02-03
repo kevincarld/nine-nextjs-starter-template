@@ -20,6 +20,12 @@ export default function Mover({ x, y, move, scale, children, ...chakra }) {
         {children}
       </Parallax>
     </Box>
-
   )
 }
+
+{/* Sample usage
+  <Mover y={[50,-50]}>
+    <Center h='150px' w='400px' bg='beige'>Sample Smooth Parallax</Center>
+  </Mover>
+*/}
+
