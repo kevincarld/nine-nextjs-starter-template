@@ -24,12 +24,15 @@ export default function Layout({children}) {
     <ChakraProvider resetCSS theme={customTheme}>
       <GlobalCss />
         {
+          // no smooth scroll effect
           !scrollEffect
             ? <ParallaxProvider>
                 <MastheadProvider>
                   {children}
                 </MastheadProvider>
               </ParallaxProvider>
+
+            // locomotive-scroll: https://github.com/locomotivemtl/locomotive-scroll
             : scrollEffect === 'locomotive'
               ? <MastheadProvider>
                   <LocomotiveProvider
@@ -48,6 +51,8 @@ export default function Layout({children}) {
                     </div>
                   </LocomotiveProvider>
                 </MastheadProvider>
+
+              // scroller-motion: https://scroller-motion.js.org/?path=/story/scrollermotion--motion-listeners
               : scrollEffect === 'motion'
                 ? <ParallaxProvider>
                     <ScrollerMotion disabled={!isDesktop}>
@@ -56,6 +61,8 @@ export default function Layout({children}) {
                       </MastheadProvider>
                     </ScrollerMotion>
                   </ParallaxProvider>
+
+                // no smooth scroll effect
                 : <ParallaxProvider>
                     <MastheadProvider>
                       {children}
