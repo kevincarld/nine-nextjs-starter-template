@@ -33,7 +33,7 @@ const nextConfig = {
     // false
     // locomotive : use data attr for section movements
     // motion : use in conjuction with components/util/Mover
-    scrollEffect: 'locomotive',
+    scrollEffect: false,
   },
 }
 
