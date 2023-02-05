@@ -5,7 +5,7 @@ import { Box } from '@chakra-ui/react'
 
 // NOTE: USE ONLY IF ScrollerMotion is being used in layout.
 export default function Mover({ x, y, move, scale, children, ...chakra }) {
-  const isDesktop = useResponsive('up', 'desktop')
+  const isDesktop = useResponsive('up', 'd')
   return (
     <Box {...chakra}>
       <Parallax

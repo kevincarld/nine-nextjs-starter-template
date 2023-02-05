@@ -11,8 +11,8 @@ import { Navigation, Autoplay } from "swiper";
 import { mock } from 'utils/common';
 
 export default function Slider({children, prevRef, nextRef, ...rest}) {
-  const isDesktop = useResponsive('up', 'desktop')
-  const isTablet = useResponsive('up', 'tablet')
+  const isDesktop = useResponsive('up', 'd')
+  const isTablet = useResponsive('up', 'lg')
 
   return (
       <Box
