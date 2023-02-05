@@ -9,25 +9,13 @@ const customTheme = extendTheme({
     Button
   },
   textStyles: {
-    h1: {
-      // you can also use responsive styles
-      fontSize: ['48px', '72px'],
-      fontWeight: 'bold',
-      lineHeight: '110%',
-      letterSpacing: '-2%',
-    },
-    h2: {
-      fontSize: ['36px', '48px'],
-      fontWeight: 'semibold',
-      lineHeight: '110%',
-      letterSpacing: '-1%',
-    },
+
   },
   breakpoints : {
-    mobile: '360px',
-    tablet: '768px',
-    tabletW: '1024px',
-    desktop: '1280px',
+    sm: '360px',
+    md: '768px',
+    lg: '1024px',
+    d: '1280px',
     wide: '1600px',
   },
   fonts: {
