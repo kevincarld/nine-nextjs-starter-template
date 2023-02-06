@@ -2,21 +2,21 @@ import React from 'react';
 //chakra
 import { Box } from '@chakra-ui/react';
 //
-import Container from 'components/Container';
 import { useInView } from "framer-motion"
 
 export default function BrightCoveVideo({script, dataPlayer, dataVideoId, ...rest}) {
+
   const ref = React.useRef(null)
   const isInView = useInView(ref, { margin: '0px 0px -150px 0px'})
 
   React.useEffect(() => {
-    const script = document.createElement('script');
-    script.src = script;
-    script.async = true;
-    document.body.appendChild(script);
+    const jsScript = document.createElement('script');
+    jsScript.src = script;
+    jsScript.async = true;
+    document?.body?.appendChild(jsScript);
 
     return () => {
-      document.body.removeChild(script);
+      document?.body?.removeChild(jsScript);
     }
   }, [])
 
