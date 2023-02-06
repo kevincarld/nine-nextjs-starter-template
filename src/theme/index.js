@@ -1,7 +1,4 @@
 import { extendTheme } from '@chakra-ui/react'
-import { colors } from "./colors"
-import { space } from './space'
-import { sizes } from './sizes'
 import { ButtonStyles as Button } from './components/ButtonStyles'
 
 const customTheme = extendTheme({
@@ -23,6 +20,41 @@ const customTheme = extendTheme({
     heading: "Georgia, serif",
     mono: "Menlo, monospace",
   },
+  colors: {
+    primary: '#3DCD58',
+    gray: '#F2F2F2',
+    link: '#5081FF'
+  },
+  space: {
+    gutter: '20px',
+    gridcol: '108px',
+    gridmargin: '202px',
+    px: '1px',
+    spacer: '40px',
+    desktop: {
+      spacer: '75px'
+    },
+  },
+  sizes: {
+    gutter: '20px',
+    gridcol: '108px',
+    gridmargin: '202px',
+    px: '1px',
+    spacer: '40px',
+    desktop: {
+      spacer: '75px'
+    },
+    max: 'max-content',
+    min: 'min-content',
+    full: '100%',
+    half: '50%',
+    container: {
+      desktop: '1516px',
+    },
+  },
+
+
+
   fontSizes: {
     xs: "0.75rem",
     sm: "0.875rem",
@@ -49,45 +81,6 @@ const customTheme = extendTheme({
     extrabold: 800,
     black: 900,
   },
-  lineHeights: {
-    normal: "normal",
-    none: 1,
-    shorter: 1.25,
-    short: 1.375,
-    base: 1.5,
-    tall: 1.625,
-    taller: "2",
-    "3": ".75rem",
-    "4": "1rem",
-    "5": "1.25rem",
-    "6": "1.5rem",
-    "7": "1.75rem",
-    "8": "2rem",
-    "9": "2.25rem",
-    "10": "2.5rem",
-  },
-  letterSpacings: {
-    tighter: "-0.05em",
-    tight: "-0.025em",
-    normal: "0",
-    wide: "0.025em",
-    wider: "0.05em",
-    widest: "0.1em",
-  },
-  radii: {
-    none: '0',
-    sm: '0.125rem',
-    base: '0.25rem',
-    md: '0.375rem',
-    lg: '0.5rem',
-    xl: '0.75rem',
-    '2xl': '1rem',
-    '3xl': '1.5rem',
-    full: '9999px',
-  },
-  colors,
-  space,
-  sizes,
 })
 
 export default customTheme
