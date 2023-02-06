@@ -30,6 +30,9 @@ const nextConfig = {
     },
     nineScripts: false,
 
+    // TODO: enable masthead override when nine-immersive-header has been updated
+    // mastheadOverride: false, // overrides masthead that's pulling from hostname: e.g honey,style,travel,kitchen,you,parenting,coach,pets,celebrity
+
     // false
     // locomotive : use data attr for section movements
     // motion : use in conjuction with components/util/Mover

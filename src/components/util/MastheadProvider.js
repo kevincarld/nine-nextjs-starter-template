@@ -26,6 +26,9 @@ export default function MastheadProvider({children}) {
     const fairfaxInit = async () => {
       const runscript = (await import('fairfax-header')).default
 
+      // TODO: enable mastheadoverride when nine-immersive header is updated
+      // const runscript = (await import('nine-immersive-header')).default
+
       if (!isMounted) {
         runscript({
           headerConfig: config.headerConfig,

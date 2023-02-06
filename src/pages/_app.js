@@ -11,6 +11,8 @@ import AppMeta from 'components/util/AppMeta';
 export default function App({ Component, pageProps }) {
   const isDev = process.env.NODE_ENV === 'development'
   const hasNineScripts = process.env.nineScripts
+  // TODO: Enable masthead override when nine-immersive-header has been updated
+  // const hasMastheadOverride = process.env.mastheadOverride
 
   const brand = process.env.appMeta?.brand
   const title = process.env.appMeta?.title
@@ -25,6 +27,8 @@ export default function App({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
         {/* see next.config.js for setting up */}
+        {/* TODO: Enable masthead override when nine-immersive-header has been updated */}
+        {/* {hasMastheadOverride && <meta name="masthead" content={hasMastheadOverride} />} */}
         <AppMeta />
         {/* moved og image from AppMeta to here bcoz it doesnt work if not - for some reason */}
         <meta property="og:image" content={process.env.appMeta?.ogImage} />
