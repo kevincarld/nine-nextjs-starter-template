@@ -9,6 +9,7 @@ import { ParallaxProvider } from 'react-scroll-parallax'
 import { ScrollerMotion } from 'scroller-motion'
 import { useMediaQuery } from '@chakra-ui/react';
 import { LocomotiveProvider } from './Locomotive/LocomotiveProvider';
+import GuideLines from './GuideLines';
 
 export default function Layout({children}) {
   const [isDesktop] = useMediaQuery(`(min-width: 1280px)`)
@@ -23,6 +24,8 @@ export default function Layout({children}) {
   return (
     <ChakraProvider resetCSS theme={customTheme}>
       <GlobalCss />
+      <GuideLines />
+
         {
           // no smooth scroll effect
           !scrollEffect
