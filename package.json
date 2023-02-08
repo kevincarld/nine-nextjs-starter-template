@@ -1,6 +1,6 @@
 {
   "name": "my-nine-starter-template",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "author": "Kevin David",
   "license": "ISC",
@@ -11,9 +11,6 @@
     "gg": "next build && next start",
     "lint": "next lint",
     "export": "next build && next export",
-    "exportopt": "next build && next export && node optimize.js",
-    "optimise": "node optimize.js",
-    "optimize": "node optimize.js",
     "clean": "rm -rf out",
     "cleanall": "rm -rf out && rm -rf .next",
     "surge": "git pull && yarn export && surge"
