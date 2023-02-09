@@ -91,6 +91,44 @@ export default function AppIcons({type="smh", theme="#0a1633"}) {
           )
           break;
 
+        case "afr":
+          return (
+            <>
+              <meta name="theme-color" content={theme} />
+              <link rel="shortcut icon"
+                    href="https://brandedcontent.afr.com/wp-content/uploads/2018/07/favicon-4.ico" />
+              <link rel="icon"
+                    href="https://brandedcontent.afr.com/wp-content/uploads/2018/07/favicon-4.ico" />
+              <link rel="apple-touch-icon"
+                    href="https://brandedcontent.afr.com/wp-content/uploads/2018/07/apple-touch-icon-3.png" />
+              <link rel="apple-touch-icon"
+                    sizes="57x57"
+                    href="https://brandedcontent.afr.com/wp-content/uploads/2018/07/apple-touch-icon-57x57-3.png" />
+              <link rel="apple-touch-icon"
+                    sizes="72x72"
+                    href="https://brandedcontent.afr.com/wp-content/uploads/2018/07/apple-touch-icon-72x72-3.png" />
+              <link rel="apple-touch-icon"
+                    sizes="76x76"
+                    href="https://brandedcontent.afr.com/wp-content/uploads/2018/07/apple-touch-icon-76x76-3.png" />
+              <link rel="apple-touch-icon"
+                    sizes="114x114"
+                    href="https://brandedcontent.afr.com/wp-content/uploads/2018/07/apple-touch-icon-114x114-3.png" />
+              <link rel="apple-touch-icon"
+                    sizes="120x120"
+                    href="https://brandedcontent.afr.com/wp-content/uploads/2018/07/apple-touch-icon-120x120-3.png" />
+              <link rel="apple-touch-icon"
+                    sizes="144x144"
+                    href="https://brandedcontent.afr.com/wp-content/uploads/2018/07/apple-touch-icon-144x144-3.png" />
+              <link rel="apple-touch-icon"
+                    sizes="152x152"
+                    href="https://brandedcontent.afr.com/wp-content/uploads/2018/07/apple-touch-icon-152x152-3.png" />
+              <link rel="apple-touch-icon"
+                    sizes="180x180"
+                    href="https://brandedcontent.afr.com/wp-content/uploads/2018/07/apple-touch-icon-180x180-3.png" />
+            </>
+          )
+          break;
+
 
         default:
           return null;

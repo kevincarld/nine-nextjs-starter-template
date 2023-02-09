@@ -37,8 +37,8 @@ const nextConfig = {
     // false
     // locomotive : use data attr for section movements
     // motion : use in conjuction with components/util/Mover
-    scrollEffect: false,
-  },
+    scrollEffect: false
+  }
 }
 
 module.exports = nextConfig
