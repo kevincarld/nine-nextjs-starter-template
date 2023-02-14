@@ -11,6 +11,9 @@ export default function MastheadProvider({children}) {
       bgColor: "#0A1633",
       css: {
         boxShadow: "0px 3px 6px 0px rgba(0, 0, 0, 0.16)",
+        position: 'fixed',
+        top: '0px',
+        zIndex: '9999999'
       }
     },
     footerConfig: {
