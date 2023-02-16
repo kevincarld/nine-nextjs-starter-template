@@ -2003,13 +2003,6 @@ expand-template@^2.0.3:
   resolved "https://registry.yarnpkg.com/expand-template/-/expand-template-2.0.3.tgz#6e14b3fcee0f3a6340ecb57d2e8918692052a47c"
   integrity sha512-XYfuKMvj4O35f/pOXLObndIRvyQ+/+6AhODh+OKWj9S9498pHHn/IMszH+gt0fBCRWMNfk1ZSp5x3AifmnI2vg==
 
-fairfax-header@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/fairfax-header/-/fairfax-header-0.2.2.tgz#8adae5e502012e0feadd79e67cc7f821cce6cfdd"
-  integrity sha512-XHpbfNRtfacH1KlYMuOcMN7ybUlkYEeQJPBE9gne7leOX15H9mL6/XzZfSWi5k8Iy07GUEoDzs4AmvSI1YZObg==
-  dependencies:
-    whatwg-fetch "^3.0.0"
-
 fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
   version "3.1.3"
   resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz#3a7d56b559d6cbc3eb512325244e619a65c6c525"
@@ -2764,6 +2757,13 @@ next@13.0.5:
     "@next/swc-win32-arm64-msvc" "13.0.5"
     "@next/swc-win32-ia32-msvc" "13.0.5"
     "@next/swc-win32-x64-msvc" "13.0.5"
+
+nine-immersive-header@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/nine-immersive-header/-/nine-immersive-header-0.4.0.tgz#6d5787e0d155f322be5bf3f2d5524de6aedcf4ff"
+  integrity sha512-IuN1H98GYG+/7VT/lE/W2R+XYznDxndMO/WqdbYLOtRm7MJ1/fxKRBAfTl/CID4K/Ertbd4NUvZ4KEkxuzhtGQ==
+  dependencies:
+    whatwg-fetch "^3.1.0"
 
 node-abi@^3.3.0:
   version "3.28.0"
@@ -3664,7 +3664,7 @@ virtual-scroll@^1.5.2:
     object-assign "^4.0.1"
     tiny-emitter "^1.0.0"
 
-whatwg-fetch@^3.0.0:
+whatwg-fetch@^3.1.0:
   version "3.6.2"
   resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-3.6.2.tgz#dced24f37f2624ed0281725d51d0e2e3fe677f8c"
   integrity sha512-bJlen0FcuU/0EMLrdbJ7zOnW6ITZLrZMIarMUVmdKtsGvZna8vxKYaexICWPfZ8qwf9fzNq+UEIZrnSaApt6RA==

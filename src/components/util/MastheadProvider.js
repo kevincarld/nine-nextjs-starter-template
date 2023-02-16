@@ -27,10 +27,7 @@ export default function MastheadProvider({children}) {
     let isMounted = false;
 
     const fairfaxInit = async () => {
-      const runscript = (await import('fairfax-header')).default
-
-      // TODO: enable mastheadoverride when nine-immersive header is updated
-      // const runscript = (await import('nine-immersive-header')).default
+      const runscript = (await import('nine-immersive-header')).default
 
       if (!isMounted) {
         runscript({
@@ -49,7 +46,7 @@ export default function MastheadProvider({children}) {
   if(!hasNineScripts) return children
 
   return (
-    <Box as='main'>
+    <Box as='main' mt={{base: '54px'}}>
       <header></header>
 
         {children}
