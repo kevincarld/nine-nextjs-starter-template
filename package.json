@@ -16,17 +16,17 @@
     "surge": "git pull && yarn export && surge"
   },
   "dependencies": {
-    "@chakra-ui/react": "^2.4.1",
+    "@chakra-ui/react": "^2.5.1",
     "@emotion/cache": "^11.7.1",
-    "@emotion/react": "^11.7.1",
+    "@emotion/react": "^11.10.6",
     "@emotion/server": "^11.4.0",
-    "@emotion/styled": "^11.6.0",
+    "@emotion/styled": "^11.10.6",
     "cli-progress": "^3.11.2",
-    "eslint": "8.28.0",
-    "eslint-config-next": "13.0.5",
-    "framer-motion": "^7.6.12",
+    "eslint": "8.34.0",
+    "eslint-config-next": "13.1.6",
+    "framer-motion": "^9.0.4",
     "locomotive-scroll": "^4.1.4",
-    "next": "13.0.5",
+    "next": "13.1.6",
     "nine-immersive-header": "^0.4.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -34,7 +34,7 @@
     "react-scroll-parallax": "^3.3.2",
     "scroller-motion": "^1.2.2",
     "sharp": "^0.31.2",
-    "swiper": "^8.4.2",
+    "swiper": "^9.0.5",
     "use-debounce": "^9.0.3",
     "use-resize-observer": "^9.1.0"
   }
