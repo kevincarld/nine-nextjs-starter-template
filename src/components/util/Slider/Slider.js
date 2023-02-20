@@ -1,97 +1,104 @@
-import React from 'react'
+import React, { useRef, useEffect, useState } from "react";
 // chakra
 import { Text, Box } from '@chakra-ui/react'
 //
 import { useResponsive } from 'utils/common';
 import { Image } from '@chakra-ui/react';
 // swiper
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Autoplay, Mousewheel } from "swiper";
+import { SwiperSlide } from 'swiper/react';
+import Swiper from "swiper";
+import { Navigation, Autoplay, Mousewheel, Controller } from "swiper";
 //
-import { mock } from 'utils/common';
+import { motion } from "framer-motion";
 
 export default function Slider({children, prevRef, nextRef, ...rest}) {
-  const isDesktop = useResponsive('up', 'd')
-  const isTablet = useResponsive('up', 'lg')
+  const slider1Ref = useRef(null);
+  const slider2Ref = useRef(null);
+  const [activeSlide, setActiveSlide] = useState(1)
+
+  // initialize 2 sliders
+  useEffect(() => {
+    // Slider 1 options
+    const slider1 = new Swiper(slider1Ref.current, {
+      direction: 'vertical',
+      speed: 1300,
+      mousewheel: {
+        forceToAxis: true,
+      },
+      controller: {
+        control: null
+      },
+      modules: [Autoplay, Navigation, Mousewheel, Controller]
+    });
+
+    // Slider 2 options
+    const slider2 = new Swiper(slider2Ref.current, {
+      direction: 'vertical',
+      speed: 1300,
+      mousewheel: {
+        forceToAxis: true,
+        invert: true,
+      },
+      controller: {
+        control: slider1
+      },
+      modules: [Autoplay, Navigation, Mousewheel, Controller],
+      on: {
+        init: function(slider2) {
+          slider1.controller.control = slider2
+        },
+        slideChange: function(slide) {
+          setActiveSlide(parseInt(slide.activeIndex) + 1)
+        }
+      }
+    });
+
+    return () => {
+      slider1.destroy();
+      slider2.destroy();
+    };
+  }, [])
+
   return (
-    <Box pos='relative'  className='swiper-container'>
-      <Box
-        {...rest}
-        as={Swiper}
-        loop={true}
-        direction='vertical'
-        speed={1300}
-        mousewheel={{
-          forceToAxis: true,
-        }}
-        {...typeof window !== 'undefined' && {
-          h: window.innerHeight
-        }}
-        modules={[Autoplay, Navigation, Mousewheel]}
-        className="mySwiper"
-        {...(prevRef && nextRef && {
-          navigation: {
-            enabled: true,
-            prevEl: navigationPrevRef.current,
-            nextEl: navigationNextRef.current,
-          }
-        })}
-        {...(prevRef && nextRef && {
-          onBeforeInit: (swiper) => {
-            swiper.params.navigation.prevEl = navigationPrevRef.current;
-            swiper.params.navigation.nextEl = navigationNextRef.current;
-          }
-        })}
-      >
-        <SwiperSlide className='swiper-slide' >
-          <Image fit='cover' w='full' src={'https://loremflickr.com/640/360'} />
-        </SwiperSlide>
-        <SwiperSlide className='swiper-slide' >
-          <Image fit='cover' w='full' src={'https://loremflickr.com/620/360'} />
-        </SwiperSlide>
-        <SwiperSlide className='swiper-slide' >
-          <Image fit='cover' w='full' src={'https://loremflickr.com/630/360'} />
-        </SwiperSlide>
+    <Box pos='relative' >
+
+      <Box ref={slider1Ref} className="swiper-container slider1" h={'100vh'} overflow='hidden'>
+        <Box className="swiper-wrapper">
+          <SwiperSlide className='swiper-slide' >
+            <Image fit='cover' w='full' src={'https://loremflickr.com/640/360'} />
+          </SwiperSlide>
+          <SwiperSlide className='swiper-slide' >
+            <Image fit='cover' w='full' src={'https://loremflickr.com/620/360'} />
+          </SwiperSlide>
+          <SwiperSlide className='swiper-slide' >
+            <Image fit='cover' w='full' src={'https://loremflickr.com/630/360'} />
+          </SwiperSlide>
+        </Box>
       </Box>
       {/* Slider end */}
 
-
-
-      <Box className='tae' pos='absolute' display={'flex'} inset='0 0 0 0' justifyContent='center' alignItems={'center'}  h={'100vh'}>
-        <Box pos={'relative'} w='500px' height='600px' zIndex={123} overflow='hidden'>
-          <Box
-          {...rest}
-          as={Swiper}
-          loop={true}
-          direction='vertical'
-          speed={1300}
-          mousewheel={{
-            forceToAxis: true,
-            invert: true,
-          }}
-          {...typeof window !== 'undefined' && {
-            h: '600px'
-          }}
-          modules={[Autoplay, Navigation, Mousewheel]}
-          className="mySwiper"
-          sx={{
-            '& .swiper-slide': {
-              // height: '600px!important',
-            }
-          }}
-        >
-          <SwiperSlide className='swiper-slide' >
+      <Box pos='absolute' display={'flex'} inset='0 0 0 0' justifyContent='center' alignItems={'center'}  h={'100vh'}>
+        <Box ref={slider2Ref} className="swiper-container slider2" w='500px' height='600px' overflow='hidden'>
+          <Box className="swiper-wrapper">
+            <SwiperSlide className='swiper-slide' >
             <Image fit='cover' w='full' height='600px' src={'https://placebear.com/640/360'} />
-          </SwiperSlide>
-          <SwiperSlide className='swiper-slide' >
+            </SwiperSlide>
+            <SwiperSlide className='swiper-slide' >
             <Image fit='cover' w='full' height='600px' src={'https://placebear.com/620/360'} />
-          </SwiperSlide>
-          <SwiperSlide className='swiper-slide' >
+            </SwiperSlide>
+            <SwiperSlide className='swiper-slide' >
             <Image fit='cover' w='full' height='600px' src={'https://placebear.com/630/360'} />
-          </SwiperSlide>
-        </Box>
+            </SwiperSlide>
+          </Box>
         </Box>
       </Box>
+
+      <Box pos='absolute' display={'flex'} inset='0 0 0 0' justifyContent='flex-end' alignItems={'flex-end'}>
+        <Box pos='relative' fontSize='50px' bg='black' color='white' mx='40px' my='40px' zIndex={123}>
+          <motion.span >0{activeSlide}</motion.span> / 03
+        </Box>
+      </Box>
+
     </Box>
   )
 }

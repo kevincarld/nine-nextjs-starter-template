@@ -9,6 +9,7 @@ export default function Home() {
   return (
     <Layout>
       <Slider />
+
     </Layout>
   )
 }
