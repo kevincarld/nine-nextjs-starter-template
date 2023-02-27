@@ -11,7 +11,9 @@ import AppMeta from 'components/util/AppMeta';
 export default function App({ Component, pageProps }) {
   const isDev = process.env.NODE_ENV === 'development'
   const hasNineScripts = process.env.nineScripts
+  const useNineGa = process.env.useNineGa
   const hasMastheadOverride = process.env.mastheadOverride
+  const jobCode = process.env.jobCode
 
   const brand = process.env.appMeta?.brand
   const title = process.env.appMeta?.title
@@ -34,7 +36,7 @@ export default function App({ Component, pageProps }) {
         <meta name="twitter:image" content={process.env.appMeta?.ogImage} />
       </Head>
 
-      {!isDev && hasNineScripts &&
+      {!isDev && hasNineScripts && !useNineGa && // brandedcontent ga scripts
       <>
         <Script id="titan">
           {`
@@ -134,6 +136,49 @@ export default function App({ Component, pageProps }) {
             };
             var titan = titan || {};
             titan.cmd = titan.cmd || []; // TITAN BASE CONFIG END
+          `}
+        </Script>
+      </>
+      }
+
+      {!isDev && hasNineScripts && useNineGa && // nine.com.au ga scripts
+      <>
+        <Script id="nine-kit-loader-1">
+          {`
+            // Nine Third Party Kit - Loader
+            (function () {
+              var LOADER_SCRIPT_URL =
+                "http://share.9cdn.net/share/short_cache/js/third_party/loaders/au.loader-latest.min.js";
+              var LOADER_SCRIPT_URL_SECURE =
+                "https://share.9cdn.net/share/short_cache/js/third_party/loaders/au.loader-latest.min.js";
+              var loaderScriptUrl =
+                window.location.protocol == "https:"
+                  ? LOADER_SCRIPT_URL_SECURE
+                  : LOADER_SCRIPT_URL;
+              document.write(
+                "<scr" +
+                'ipt type="text/javascript" src="' +
+                loaderScriptUrl +
+                '"></scr' +
+                "ipt>"
+              );
+            })();
+          `}
+        </Script>
+        <Script id="nine-kit-loader-2">
+          {`
+          NINEAU_Loader.setup();
+
+          //Nine Third Party Kit - Configurationmsnportalaucatdev
+          NINEAU_Config.setOmnitureSuiteId("msnportalaucatglobal"); // change tp msnportalaucatglobal !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+          NINEAU_Config.setCategory("miscellaneous"); // Page Category Name
+          NINEAU_Config.setSiteName("campaign"); // Page Site Name
+          NINEAU_Config.setSectionName("${jobCode}"); // Optional - Delete if unneeded.
+          NINEAU_Config.setNielsenEnabled(false);
+          NINEAU_Config.setAdcEnabled(false);
+          NINEAU_Config.setPageTrackingOnRenderTracking(true);
+          NINEAU_ThirdParty.initialize();
+          NINEAU_ThirdParty.renderTracking();
           `}
         </Script>
       </>

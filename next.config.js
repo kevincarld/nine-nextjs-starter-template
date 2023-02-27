@@ -26,9 +26,11 @@ const nextConfig = {
       themeColour: '#0a1633', // hex
       ogImage: 'https://live-native-paid-content.pantheonsite.io/wp-content/uploads/2022/12/lecreuset-social-media-bg-1.jpg',
       date: 'dd-mm-yy', // e.g 03-12-23
-      year: 'yyyy', // e.g 2023
+      year: 'yyyy' // e.g 2023
     },
+    jobCode: '11111-name', // used for nine ga scripts
     nineScripts: false,
+    useNineGa: false, // Disabled data layer script and uses nine's instead
     guidelines: false, // shows or hides layout guideline bars
     mastheadOverride: false, // overrides masthead that's pulling from hostname: e.g honey,style,travel,kitchen,you,parenting,coach,pets,celebrity
 
