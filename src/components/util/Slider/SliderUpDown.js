@@ -99,31 +99,31 @@ export default function SliderUpDown({children, prevRef, nextRef, ...rest}) {
           </Box>
         </Box>
 
-        <Box mt='30px'>
-          <Text pos='relative' textAlign='center' color='black' zIndex={123123}>sample control</Text>
-          <Box className="arrow-holder" sx={{
-            display:'flex',
-            gap: '50px',
-            'svg': {
-              '&:hover': {
-                cursor: 'pointer'
-              }
-            },
-          }}>
-            <Box pos="relative" zIndex={100} ref={navigationPrevRef} className="slider-container btn-prev" transform={'rotate(90deg)'}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="40.2" height="40.2" viewBox="0 0 40.2 40.2">
-                <path id="Icon_ionic-ios-arrow-dropleft-circle" data-name="Icon ionic-ios-arrow-dropleft-circle" d="M23.475,3.375a20.1,20.1,0,1,0,20.1,20.1A20.1,20.1,0,0,0,23.475,3.375Zm4.194,27.937a1.872,1.872,0,0,1,0,2.638,1.842,1.842,0,0,1-1.314.541,1.875,1.875,0,0,1-1.324-.551l-9.084-9.113a1.863,1.863,0,0,1,.058-2.57l9.219-9.248a1.865,1.865,0,1,1,2.638,2.638l-7.914,7.827Z" transform="translate(-3.375 -3.375)" fill="#c00c00" opacity="0.703"/>
-              </svg>
-            </Box>
+          <Box mt='30px'>
+            <Text pos='relative' textAlign='center' color='black' zIndex={123123}>sample control</Text>
+            <Box className="arrow-holder" sx={{
+              display:'flex',
+              gap: '50px',
+              'svg': {
+                '&:hover': {
+                  cursor: 'pointer'
+                }
+              },
+            }}>
+              <Box pos="relative" zIndex={100} ref={navigationPrevRef} className="slider-container btn-prev" transform={'rotate(90deg)'}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="40.2" height="40.2" viewBox="0 0 40.2 40.2">
+                  <path id="Icon_ionic-ios-arrow-dropleft-circle" data-name="Icon ionic-ios-arrow-dropleft-circle" d="M23.475,3.375a20.1,20.1,0,1,0,20.1,20.1A20.1,20.1,0,0,0,23.475,3.375Zm4.194,27.937a1.872,1.872,0,0,1,0,2.638,1.842,1.842,0,0,1-1.314.541,1.875,1.875,0,0,1-1.324-.551l-9.084-9.113a1.863,1.863,0,0,1,.058-2.57l9.219-9.248a1.865,1.865,0,1,1,2.638,2.638l-7.914,7.827Z" transform="translate(-3.375 -3.375)" fill="#c00c00" opacity="0.703"/>
+                </svg>
+              </Box>
 
-            <Box pos="relative" zIndex={100} ref={navigationNextRef} className="slider-container btn-next" transform={'rotate(90deg)'}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="40.199" height="40.2" viewBox="0 0 40.199 40.2">
-                <path id="Icon_ionic-ios-arrow-dropleft-circle" data-name="Icon ionic-ios-arrow-dropleft-circle" d="M23.475,3.375a20.1,20.1,0,1,1-20.1,20.1A20.1,20.1,0,0,1,23.475,3.375ZM19.281,31.312a1.872,1.872,0,0,0,0,2.638,1.842,1.842,0,0,0,1.314.541,1.875,1.875,0,0,0,1.324-.551L31,24.828a1.863,1.863,0,0,0-.058-2.57l-9.219-9.248a1.865,1.865,0,0,0-2.638,2.638L27,23.475Z" transform="translate(-3.375 -3.375)" fill="#c00c00" opacity="0.703"/>
-              </svg>
+              <Box pos="relative" zIndex={100} ref={navigationNextRef} className="slider-container btn-next" transform={'rotate(90deg)'}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="40.199" height="40.2" viewBox="0 0 40.199 40.2">
+                  <path id="Icon_ionic-ios-arrow-dropleft-circle" data-name="Icon ionic-ios-arrow-dropleft-circle" d="M23.475,3.375a20.1,20.1,0,1,1-20.1,20.1A20.1,20.1,0,0,1,23.475,3.375ZM19.281,31.312a1.872,1.872,0,0,0,0,2.638,1.842,1.842,0,0,0,1.314.541,1.875,1.875,0,0,0,1.324-.551L31,24.828a1.863,1.863,0,0,0-.058-2.57l-9.219-9.248a1.865,1.865,0,0,0-2.638,2.638L27,23.475Z" transform="translate(-3.375 -3.375)" fill="#c00c00" opacity="0.703"/>
+                </svg>
+              </Box>
             </Box>
           </Box>
-        </Box>
-        </Box>
+      </Box>
 
       {/* pagination */}
       <Box pos='absolute' display={'flex'} inset='0 0 0 0' justifyContent='flex-end' alignItems={'flex-end'}>
