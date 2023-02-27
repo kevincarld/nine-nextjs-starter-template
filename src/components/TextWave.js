@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, Text } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 
-export default function RollerCoasterText() {
+export default function TextWave() {
 
   const variants = {
     hide: {
