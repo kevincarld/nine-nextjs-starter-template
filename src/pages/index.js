@@ -3,13 +3,14 @@ import Layout from "components/util/Layout"
 // chakra
 import { Heading, Button } from "@chakra-ui/react"
 //
-import Slider from "components/util/Slider/Slider"
+import SliderUpDown from "components/util/Slider/SliderUpDown"
+import SliderLeftRight from "components/util/Slider/SliderLeftRight"
 
 export default function Home() {
   return (
     <Layout>
-      <Slider />
-
+      <SliderUpDown />
+      {/* <SliderLeftRight /> */}
     </Layout>
   )
 }
