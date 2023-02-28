@@ -22,7 +22,7 @@ const nextConfig = {
       title: 'title in next.config.js', // e.g Being a good pet parent starts at mealtime
       description: 'description in next.config.js',
       siteName: 'siteName Title in next.config.js', // The Sydney Morning Herald, Good Food
-      icon: 'smh', // smh, goodfood, nine
+      icon: 'smh', // smh, goodfood, nine, afr, traveller
       themeColour: '#0a1633', // hex
       ogImage: 'https://live-native-paid-content.pantheonsite.io/wp-content/uploads/2022/12/lecreuset-social-media-bg-1.jpg',
       date: 'dd-mm-yy', // e.g 03-12-23
