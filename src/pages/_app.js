@@ -143,7 +143,26 @@ export default function App({ Component, pageProps }) {
 
       {!isDev && hasNineScripts && useNineGa && // nine.com.au ga scripts
       <>
-        <Script id="nine-kit-loader-1">
+        <Script id="nineKit2" async>
+          {`
+          function runSecondScript() {
+            console.log('boom')
+            NINEAU_Loader.setup();
+
+            //Nine Third Party Kit - Configurationmsnportalaucatdev
+            NINEAU_Config.setOmnitureSuiteId("msnportalaucatglobal"); // change tp msnportalaucatglobal !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            NINEAU_Config.setCategory("miscellaneous"); // Page Category Name
+            NINEAU_Config.setSiteName("campaign"); // Page Site Name
+            NINEAU_Config.setSectionName("11332-lifeblood"); // Optional - Delete if unneeded.
+            NINEAU_Config.setNielsenEnabled(false);
+            NINEAU_Config.setAdcEnabled(false);
+            NINEAU_Config.setPageTrackingOnRenderTracking(true);
+            NINEAU_ThirdParty.initialize();
+            NINEAU_ThirdParty.renderTracking();
+          }
+          `}
+        </Script>
+        <Script id="nineKit1">
           {`
             // Nine Third Party Kit - Loader
             (function () {
@@ -155,30 +174,13 @@ export default function App({ Component, pageProps }) {
                 window.location.protocol == "https:"
                   ? LOADER_SCRIPT_URL_SECURE
                   : LOADER_SCRIPT_URL;
-              document.write(
-                "<scr" +
-                'ipt type="text/javascript" src="' +
-                loaderScriptUrl +
-                '"></scr' +
-                "ipt>"
-              );
-            })();
-          `}
-        </Script>
-        <Script id="nine-kit-loader-2">
-          {`
-          NINEAU_Loader.setup();
 
-          //Nine Third Party Kit - Configurationmsnportalaucatdev
-          NINEAU_Config.setOmnitureSuiteId("msnportalaucatglobal"); // change tp msnportalaucatglobal !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-          NINEAU_Config.setCategory("miscellaneous"); // Page Category Name
-          NINEAU_Config.setSiteName("campaign"); // Page Site Name
-          NINEAU_Config.setSectionName("${jobCode}"); // Optional - Delete if unneeded.
-          NINEAU_Config.setNielsenEnabled(false);
-          NINEAU_Config.setAdcEnabled(false);
-          NINEAU_Config.setPageTrackingOnRenderTracking(true);
-          NINEAU_ThirdParty.initialize();
-          NINEAU_ThirdParty.renderTracking();
+              const script = document.createElement('script');
+              script.src = loaderScriptUrl;
+              script.async = true;
+              script.onload = runSecondScript;
+              document.body.appendChild(script);
+            })();
           `}
         </Script>
       </>
