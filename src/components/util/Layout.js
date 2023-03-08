@@ -4,7 +4,6 @@ import { ChakraProvider } from '@chakra-ui/react'
 //
 import customTheme from 'theme';
 import GlobalCss from 'theme/components/GlobalCss';
-import MastheadProvider from './MastheadProvider';
 import { ParallaxProvider } from 'react-scroll-parallax'
 import { ScrollerMotion } from 'scroller-motion'
 import { useMediaQuery } from '@chakra-ui/react';

@@ -27,7 +27,7 @@
     "framer-motion": "^9.0.4",
     "locomotive-scroll": "^4.1.4",
     "next": "13.1.6",
-    "nine-immersive-header": "^0.4.0",
+    "nine-immersive-header": "^0.4.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-lazy-load-image-component": "^1.5.6",
