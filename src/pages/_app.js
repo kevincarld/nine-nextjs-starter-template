@@ -7,6 +7,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import AppMeta from 'components/util/AppMeta';
+import MastheadProvider from 'components/util/MastheadProvider';
 
 export default function App({ Component, pageProps }) {
   const isDev = process.env.NODE_ENV === 'development'
@@ -186,7 +187,9 @@ export default function App({ Component, pageProps }) {
       </>
       }
 
-      <Component {...pageProps} />
+      <MastheadProvider>
+        <Component {...pageProps} />
+      </MastheadProvider>
 
       {!isDev && hasNineScripts &&
       <>

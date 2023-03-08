@@ -30,46 +30,38 @@ export default function Layout({children}) {
           // no smooth scroll effect
           !scrollEffect
             ? <ParallaxProvider>
-                <MastheadProvider>
-                  {children}
-                </MastheadProvider>
+                {children}
               </ParallaxProvider>
 
             // locomotive-scroll: https://github.com/locomotivemtl/locomotive-scroll
             : scrollEffect === 'locomotive'
-              ? <MastheadProvider>
-                  <LocomotiveProvider
-                    containerRef={containerRef}
-                    options={locomotiveOptions}
-                    watch={
-                      [
-                        //..all the dependencies you want to watch to update the scroll.
-                        //  Basicaly, you would want to watch page/location changes
-                        //  For exemple, on Next.js you would want to watch properties like `router.asPath` (you may want to add more criterias if the instance should be update on locations with query parameters)
-                      ]
-                    }
-                  >
-                    <div data-scroll-container ref={containerRef}>
-                      {children}
-                    </div>
-                  </LocomotiveProvider>
-                </MastheadProvider>
+              ? <LocomotiveProvider
+                  containerRef={containerRef}
+                  options={locomotiveOptions}
+                  watch={
+                    [
+                      //..all the dependencies you want to watch to update the scroll.
+                      //  Basicaly, you would want to watch page/location changes
+                      //  For exemple, on Next.js you would want to watch properties like `router.asPath` (you may want to add more criterias if the instance should be update on locations with query parameters)
+                    ]
+                  }
+                >
+                  <div data-scroll-container ref={containerRef}>
+                    {children}
+                  </div>
+                </LocomotiveProvider>
 
               // scroller-motion: https://scroller-motion.js.org/?path=/story/scrollermotion--motion-listeners
               : scrollEffect === 'motion'
                 ? <ParallaxProvider>
                     <ScrollerMotion disabled={!isDesktop}>
-                      <MastheadProvider>
-                        {children}
-                      </MastheadProvider>
+                      {children}
                     </ScrollerMotion>
                   </ParallaxProvider>
 
                 // no smooth scroll effect
                 : <ParallaxProvider>
-                    <MastheadProvider>
-                      {children}
-                    </MastheadProvider>
+                    {children}
                   </ParallaxProvider>
         }
     </ChakraProvider>
