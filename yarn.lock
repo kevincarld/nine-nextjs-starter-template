@@ -2664,10 +2664,10 @@ next@13.1.6:
     "@next/swc-win32-ia32-msvc" "13.1.6"
     "@next/swc-win32-x64-msvc" "13.1.6"
 
-nine-immersive-header@^0.4.2:
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/nine-immersive-header/-/nine-immersive-header-0.4.2.tgz#fc5eefbca9c597813f1d005fda0aa13deb43576d"
-  integrity sha512-UykIf5qI8LhJX0gJHR45tY7ee6P63rJ1m7l/BMOzjeuqBKRCkjTSbkJXjhscv/OP06AGpjBueerHqHQjfpjAyg==
+nine-immersive-header@~0.4.3:
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/nine-immersive-header/-/nine-immersive-header-0.4.3.tgz#79fd8e6debe55c79c19c7d44edca89f8b554ed0a"
+  integrity sha512-wWUkzd+Shosi0h8dEIxAAYqE5hZrc7tICHpgStv22aBg6SGIgvJQMZCUo8c1xE7Aep2NoHKHGBrE4VcsZYHCww==
   dependencies:
     whatwg-fetch "^3.1.0"
 
