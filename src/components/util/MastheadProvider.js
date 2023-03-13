@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box } from '@chakra-ui/react';
 export default function MastheadProvider({children}) {
-  const hasNineScripts = process.env.nineScripts
+  const activateMasthead = process.env.activateMasthead
 
   // set default config
   const config = {
@@ -43,7 +43,7 @@ export default function MastheadProvider({children}) {
 
   }, [config]);
 
-  if(!hasNineScripts) return children
+  if(!activateMasthead) return children
 
   return (
     <Box as='main' mt={{base: '54px'}}>

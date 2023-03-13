@@ -30,6 +30,7 @@ const nextConfig = {
     },
     jobCode: '11111-name', // used for nine ga scripts
     guidelines: false, // shows or hides layout guideline bars
+    activateMasthead: false, // shows or hides masthead
     mastheadOverride: false, // overrides masthead that's pulling from hostname: e.g honey,style,travel,kitchen,you,parenting,coach,pets,celebrity
   }
 }
