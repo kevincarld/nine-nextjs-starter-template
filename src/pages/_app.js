@@ -11,8 +11,6 @@ import MastheadProvider from 'components/util/MastheadProvider';
 
 export default function App({ Component, pageProps }) {
   const isDev = process.env.NODE_ENV === 'development'
-  const hasNineScripts = process.env.nineScripts
-  const useNineGa = process.env.useNineGa
   const hasMastheadOverride = process.env.mastheadOverride
   const jobCode = process.env.jobCode
 
@@ -37,7 +35,7 @@ export default function App({ Component, pageProps }) {
         <meta name="twitter:image" content={process.env.appMeta?.ogImage} />
       </Head>
 
-      {!isDev && hasNineScripts && !useNineGa && // brandedcontent ga scripts
+       {/* // UNCOMMENT FOR: brandedcontent snow plow scripts
       <>
         <Script id="titan">
           {`
@@ -144,10 +142,9 @@ export default function App({ Component, pageProps }) {
           !function(e,t,a,n,g){e[n]=e[n]||[],e[n].push({"gtm.start":(new Date).getTime(),event:"gtm.js"});var m=t.getElementsByTagName(a)[0],r=t.createElement(a);r.async=!0,r.src="https://www.googletagmanager.com/gtm.js?id=GTM-WV7FLW7",m.parentNode.insertBefore(r,m)}(window,document,"script","dataLayer");
           `}
         </Script>
-      </>
-      }
+      </> */}
 
-      {!isDev && hasNineScripts && useNineGa && // nine.com.au ga scripts
+      {/* UNCOMMENT FOR: nine.com.au ga scripts
       <>
         <Script id="nineKit2" async>
           {`
@@ -189,14 +186,11 @@ export default function App({ Component, pageProps }) {
             })();
           `}
         </Script>
-      </>
-      }
+      </> */}
 
-      <MastheadProvider>
-        <Component {...pageProps} />
-      </MastheadProvider>
+      <Component {...pageProps} />
 
-      {!isDev && hasNineScripts &&
+      {/* UNCOMMENT FOR: GA4 scripts
       <>
         <Script id='ga4' async src="https://www.googletagmanager.com/gtag/js?id=G-8H9J6GLFEH" />
         <Script id="ga4b">
@@ -208,8 +202,7 @@ export default function App({ Component, pageProps }) {
              gtag('config', 'G-8H9J6GLFEH');
           `}
         </Script>
-      </>
-      }
+      </> */}
     </React.Fragment>
   );
 }

@@ -29,8 +29,6 @@ const nextConfig = {
       year: 'yyyy' // e.g 2023
     },
     jobCode: '11111-name', // used for nine ga scripts
-    nineScripts: false,
-    useNineGa: false, // Disabled data layer script and uses nine's instead
     guidelines: false, // shows or hides layout guideline bars
     mastheadOverride: false, // overrides masthead that's pulling from hostname: e.g honey,style,travel,kitchen,you,parenting,coach,pets,celebrity
 
