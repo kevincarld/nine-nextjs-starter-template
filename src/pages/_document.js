@@ -4,7 +4,6 @@ import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { CacheProvider } from '@emotion/react';
 import createCache from '@emotion/cache';
 import createEmotionServer from '@emotion/server/create-instance';
-import AppIcons from 'components/util/AppIcons';
 
 const getCache = () => {
   const cache = createCache({ key: 'css', prepend: true });
@@ -15,17 +14,12 @@ const getCache = () => {
 
 export default class MyDocument extends Document {
   render() {
-    const {
-      icon,
-      themeColour,
-    } = process.env.appMeta
 
     return (
       <Html lang="en">
 
         <Head>
-          {/* see next.config.js for setting up */}
-          <AppIcons type={icon} theme={themeColour}/>
+
         </Head>
 
         <body>

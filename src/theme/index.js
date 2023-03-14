@@ -1,9 +1,8 @@
 import { extendTheme } from '@chakra-ui/react'
-import { ButtonStyles as Button } from './components/ButtonStyles'
 
 const customTheme = extendTheme({
   components: {
-    Button
+
   },
   textStyles: {
 
