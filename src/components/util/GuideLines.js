@@ -17,7 +17,7 @@ export default function GuideLines({opacity='.20'}) {
       opacity={opacity}
     >
       {Array(12).fill().map((_, i) => (
-        <GridItem key={i} w='auto' bg='cyan'></GridItem>
+          <GridItem key={i} w='auto' bg={{base: 'transparent', lg: 'cyan'}}></GridItem>
       ))}
     </Grid>
   )
