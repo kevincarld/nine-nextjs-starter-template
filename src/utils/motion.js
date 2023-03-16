@@ -47,3 +47,21 @@ export const animation_zoom = {
     }
   }
 }
+
+export const animation_staggerParent = {
+  initial: {},
+  animate: {
+    transition: { staggerChildren: 0.1 },
+  },
+}
+
+export const animation_staggerChildren = {
+  initial: {
+    opacity: 0,
+    y: 50
+  },
+  animate: {
+    opacity: 1,
+    y: 0
+  },
+}
