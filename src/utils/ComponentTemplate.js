@@ -6,6 +6,7 @@ import { mock } from 'utils/common'
 import Container from 'components/util/Container'
 import Img from 'components/util/Img'
 import Figure from 'components/util/Figure'
+import { motion } from 'framer-motion'
 
 export default function ComponentTemplate() {
 
