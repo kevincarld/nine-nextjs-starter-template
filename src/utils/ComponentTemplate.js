@@ -11,7 +11,7 @@ export default function ComponentTemplate() {
 
   return (
     <Box>
-
+      <h1>I am ComponentTemplate</h1>
     </Box>
   )
 }
