@@ -14,7 +14,8 @@
     "clean": "rm -rf out",
     "cleanall": "rm -rf out && rm -rf .next",
     "surge": "git pull && yarn export && surge ./out",
-    "rfc": "node ./node-scripts/create-component.js"
+    "rfc": "node ./node-scripts/create-component.js",
+    "push": "node ./node-scripts/git-push.js"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.5.1",
