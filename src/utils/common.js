@@ -44,7 +44,7 @@ export function useIsInViewport(ref) {
 export const mock = (dimensions, text='Img', color="gray") => {
   const colors = {
     gray: '808080',
-    white: 'FFFFFF',
+    white: 'F0F0F0',
     black: '000000',
     red: 'FCA481',
     blue: 'A4DEF0',
@@ -52,6 +52,6 @@ export const mock = (dimensions, text='Img', color="gray") => {
     yellow: 'FFE194',
     pink: 'F7DCEC'
   }
-  let newText = text.replaceAll(' ', '+')
+  let newText = text.toString().replaceAll(' ', '+')
   return `https://via.placeholder.com/${dimensions}/${colors[color]}?text=${newText}`
 }
