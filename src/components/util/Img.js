@@ -4,16 +4,7 @@ import { mock as mockFunc } from 'utils/common'
 
 export default function Img({ dimension, alt, mock=false, src, ...rest}) {
   const [width, height] = dimension.split('x')
-  const colors = [
-    'gray',
-    'white',
-    'black',
-    'red',
-    'blue',
-    'green',
-    'yellow',
-    'pink'
-  ]
+  const colors = ["red", "green", "blue", "yellow", "orange", "purple", "pink", "gray", "maroon", "navy", "olive", "teal", "silver", "gold", "indigo", "magenta", "turquoise", "peach", "coral"]
   const randomColor = colors[Math.floor(Math.random() * colors.length)]
   const mockSrc = mockFunc(dimension, mock, randomColor)
 
