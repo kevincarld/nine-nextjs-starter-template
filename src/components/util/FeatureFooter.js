@@ -10,7 +10,7 @@ export default function FeatureFooter({svg, href, ...rest}) {
       {...rest}
     >
       <Text sx={{
-        fontSize: {base: '9px', desktop: '12px'},
+        fontSize: {base: '9px', d: '12px'},
         fontFamily: 'Arial',
         mb: '15px',
         color:'#867750',
