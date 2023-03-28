@@ -8,18 +8,38 @@ const rl = readline.createInterface({
 
 // Prompt the user for the component name
 rl.question('Enter the component name: ', (componentName) => {
-  // Read the template file
-  fs.readFile('src/utils/ComponentTemplate.js', 'utf8', (err, data) => {
-    if (err) throw err;
 
-    // Replace the placeholder component name with the user-specified name
-    const updatedData = data.replace(/ComponentTemplate/g, componentName);
+  if(componentName.toString().includes(',')) {
+    componentName.split(',').forEach((componentName) => {
+      fs.readFile('src/utils/ComponentTemplate.js', 'utf8', (err, data) => {
+        if (err) throw err;
 
-    // Write the updated file to the components directory with the user-specified name
-    fs.writeFile(`src/components/${componentName}.js`, updatedData, (err) => {
+        // Replace the placeholder component name with the user-specified name
+        const updatedData = data.replace(/ComponentTemplate/g, componentName);
+
+        // Write the updated file to the components directory with the user-specified name
+        fs.writeFile(`src/components/${componentName}.js`, updatedData, (err) => {
+          if (err) throw err;
+          console.log(`New component ${componentName} created successfully!`);
+          rl.close();
+        });
+      });
+    })
+  } else {
+
+    // Read the template file
+    fs.readFile('src/utils/ComponentTemplate.js', 'utf8', (err, data) => {
       if (err) throw err;
-      console.log(`New component ${componentName} created successfully!`);
-      rl.close();
+
+      // Replace the placeholder component name with the user-specified name
+      const updatedData = data.replace(/ComponentTemplate/g, componentName);
+
+      // Write the updated file to the components directory with the user-specified name
+      fs.writeFile(`src/components/${componentName}.js`, updatedData, (err) => {
+        if (err) throw err;
+        console.log(`New component ${componentName} created successfully!`);
+        rl.close();
+      });
     });
-  });
+  }
 });
