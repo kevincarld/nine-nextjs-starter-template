@@ -15,12 +15,13 @@ export default function Layout({children}) {
 
   return (
     <ChakraProvider resetCSS theme={customTheme}>
-      <GlobalCss />
       <GuideLines />
 
       <DefaultLayout>
         {children}
       </DefaultLayout>
+
+      <GlobalCss />
     </ChakraProvider>
 
   )
