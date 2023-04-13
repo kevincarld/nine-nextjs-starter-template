@@ -153,14 +153,13 @@ export default function App({ Component, pageProps }) {
           <Script id="nineKit2" async>
             {`
             function runSecondScript() {
-              console.log('boom')
               NINEAU_Loader.setup();
 
               //Nine Third Party Kit - Configurationmsnportalaucatdev
               NINEAU_Config.setOmnitureSuiteId("msnportalaucatglobal"); // change tp msnportalaucatglobal !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
               NINEAU_Config.setCategory("miscellaneous"); // Page Category Name
               NINEAU_Config.setSiteName("campaign"); // Page Site Name
-              NINEAU_Config.setSectionName("11332-lifeblood"); // Optional - Delete if unneeded.
+              NINEAU_Config.setSectionName("${jobCode}"); // Optional - Delete if unneeded.
               NINEAU_Config.setNielsenEnabled(false);
               NINEAU_Config.setAdcEnabled(false);
               NINEAU_Config.setPageTrackingOnRenderTracking(true);
