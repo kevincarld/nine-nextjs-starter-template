@@ -14,6 +14,7 @@ const customTheme = extendTheme({
     lg: '1024px',
     d: '1280px',
     wide: '1600px',
+    hd: '1900px',
   },
   fonts: {
     body: "system-ui, sans-serif",
