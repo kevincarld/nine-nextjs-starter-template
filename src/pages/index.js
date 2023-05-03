@@ -11,6 +11,7 @@ export default function Home() {
       <Container>
         <Heading as="h1">Hello World</Heading>
         <Button>Button</Button>
+
       </Container>
     </Layout>
   )
